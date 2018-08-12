@@ -1,0 +1,161 @@
+{
+	"info": {
+		"name": "Variables",
+		"_postman_id": "4d5a2aa6-ac2a-45f4-8f14-df4c7893d47e",
+		"description": "功能：练习Postman Variables如何功能及使用\n1、variables（Globals、Collection、Evironment、Local、Data）；\n2、scope（作用域）；\n3、Script中使用variables；",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "folder1",
+			"description": "",
+			"item": [
+				{
+					"name": "variables",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "86911d10-74ba-4d26-be72-a01323b8f070",
+								"type": "text/javascript",
+								"exec": [
+									"/// 验证Variables用法",
+									"",
+									"",
+									"",
+									"/// 验证Globals",
+									"console.log(\"####Globals:\" + pm.globals);",
+									"console.log(\"####Globals string:\" + JSON.stringify(pm.globals));",
+									"",
+									"",
+									"/// 验证Environment",
+									"console.log(\"####Environment:\" + pm.environment);",
+									"//console.log(\"####Environment string:\" + pm.environment.toString());",
+									"console.log(\"####Environment string:\" + JSON.stringify(pm.environment));",
+									"",
+									"",
+									"/// 验证Collection",
+									"/// 没有pm.collection定义",
+									"// console.log(\"####Collection:\" + pm.collection);",
+									"// console.log(\"####Collection string:\" + JSON.stringify(pm.collection));",
+									"",
+									"",
+									"/// 获取data file",
+									"console.log(\"####data:\" + data);",
+									"console.log(\"####data string:\" + JSON.stringify(data));",
+									"console.log(\"##data data_var1:\" + data.data_var1);",
+									"",
+									"console.log(\"####data pm.iterationData:\" + pm.iterationData);",
+									"console.log(\"####data pm.iterationData string:\" + JSON.stringify(pm.iterationData));",
+									"console.log(\"##data data_var2:\" + pm.iterationData.get(\"data_var2\"));",
+									"",
+									"",
+									"/// 验证Variables",
+									"console.log(\"####Variables:\" + pm.variables);",
+									"console.log(\"####Variables string:\" + JSON.stringify(pm.variables));",
+									"",
+									"// 通过pm.variables.get(\"var\")获取变量（不限类型)",
+									"// 获取data file参数",
+									"console.log(\"##Variables data_var1:\" + pm.variables.get(\"data_var1\"));",
+									"// 获取Evironment参数",
+									"console.log(\"##Variables environment_var1:\" + pm.variables.get(\"environment_var1\"));",
+									"// 获取Collection参数",
+									"console.log(\"##Variables c_var1:\" + pm.variables.get(\"c_var1\"));",
+									"// 获取Global参数",
+									"console.log(\"##Variables global_var1:\" + pm.variables.get(\"global_var1\"));",
+									"// 如果不同类型变量有重名的，根据priority来获取",
+									"var test = \"local_test_value\";",
+									"console.log(\"##Variables test:\" + pm.variables.get(\"test\"));",
+									"",
+									"// variables set",
+									"console.log(\"##Variables testSet:\" + pm.variables.set(\"testSet\") + \"variables_testSet_value\");",
+									"",
+									"",
+									"",
+									"",
+									"",
+									"",
+									"",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"cityName\":\"beijing\"}"
+						},
+						"url": {
+							"raw": "http://test.m.api.cct.cn/api-common/get-city-pname",
+							"protocol": "http",
+							"host": [
+								"test",
+								"m",
+								"api",
+								"cct",
+								"cn"
+							],
+							"path": [
+								"api-common",
+								"get-city-pname"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "b70da5cf-0347-4e3b-bdbc-21e1810daaa4",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "4a3b6a39-1492-4cec-9637-e0f7ff0887e0",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "4840f4f9-a5ad-4ec1-b165-85e38ef7fe57",
+			"key": "test",
+			"value": "c_test_value",
+			"type": "text"
+		},
+		{
+			"id": "2b52dd82-fa45-475a-ade0-c84de0d3ae26",
+			"key": "c_var1",
+			"value": "c_var1_value1",
+			"type": "text"
+		},
+		{
+			"id": "a235d57e-5d77-4a02-9127-a455ccac3e5b",
+			"key": "c_var2",
+			"value": "c_var2_value2",
+			"type": "text"
+		}
+	]
+}
