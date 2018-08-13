@@ -1,0 +1,74 @@
+{
+	"info": {
+		"name": "ChandaoLite-V1.0.0",
+		"_postman_id": "aab9edd6-7e2e-4577-bf6a-dbf77e28ceae",
+		"description": "App:ChandaoLite",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\":{\n        \"username\":\"liyanqing\",\n        \"password\":\"liyanqing1989\"\n    }\n}"
+				},
+				"url": {
+					"raw": "http://192.168.20.69:9200/login",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"20",
+						"69"
+					],
+					"port": "9200",
+					"path": [
+						"login"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "List",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\":{\n        \"name\":\"liyanqing\",\n        \"status\":\"0\",\n        \"page\":\"1\"\n    }\n}"
+				},
+				"url": {
+					"raw": "http://192.168.20.69:9200/submit",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"20",
+						"69"
+					],
+					"port": "9200",
+					"path": [
+						"submit"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
