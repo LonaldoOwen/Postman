@@ -1,6 +1,6 @@
 {
 	"info": {
-		"name": "Variables",
+		"name": "Variables-V1.0.0",
 		"_postman_id": "4d5a2aa6-ac2a-45f4-8f14-df4c7893d47e",
 		"description": "功能：练习Postman Variables如何功能及使用\n1、variables（Globals、Collection、Evironment、Local、Data）；\n2、scope（作用域）；\n3、Script中使用variables；",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -140,19 +140,19 @@
 	],
 	"variable": [
 		{
-			"id": "4840f4f9-a5ad-4ec1-b165-85e38ef7fe57",
+			"id": "ec6ae3e2-6670-412e-8243-983049372031",
 			"key": "test",
 			"value": "c_test_value",
 			"type": "text"
 		},
 		{
-			"id": "2b52dd82-fa45-475a-ade0-c84de0d3ae26",
+			"id": "d2d0c642-e8f5-49f9-9daf-12de21f6a78f",
 			"key": "c_var1",
 			"value": "c_var1_value1",
 			"type": "text"
 		},
 		{
-			"id": "a235d57e-5d77-4a02-9127-a455ccac3e5b",
+			"id": "1e592801-795f-4113-a2c8-7fb8a6109212",
 			"key": "c_var2",
 			"value": "c_var2_value2",
 			"type": "text"
